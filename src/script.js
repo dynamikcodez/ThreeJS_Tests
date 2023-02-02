@@ -80,7 +80,7 @@ function initGraphics() {
 
     container = document.getElementById( 'container' );
 
-    camera = new THREE.PerspectiveCamera( 60, window.innerWidth / window.innerHeight, 0.2, 2000 );
+    camera = new THREE.PerspectiveCamera( 60, (window.innerWidth / window.innerHeight), 0.2, 2000 );
 
     scene = new THREE.Scene();
     scene.background = new THREE.Color( 0xbfd1e5 );
@@ -89,7 +89,7 @@ function initGraphics() {
 
     renderer = new THREE.WebGLRenderer();
     renderer.setPixelRatio( window.devicePixelRatio );
-    renderer.setSize( window.innerWidth, window.innerHeight );
+    renderer.setSize( (window.innerWidth * 0.25), (window.innerHeight * 0.25) );
     renderer.shadowMap.enabled = true;
     container.appendChild( renderer.domElement );
 
@@ -396,7 +396,7 @@ function onWindowResize() {
     camera.aspect = window.innerWidth / window.innerHeight;
     camera.updateProjectionMatrix();
 
-    renderer.setSize( window.innerWidth, window.innerHeight );
+    renderer.setSize( (window.innerWidth * 0.25), (window.innerHeight * 0.25) );
 
 }
 

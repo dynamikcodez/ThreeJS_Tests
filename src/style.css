@@ -18,13 +18,14 @@ body
     left: 0;
     outline: none;
 }
-.container
+#container
 {
-    opacity: 0.2;
-    z-index: 2;
+    border: 100px;
+    /* position: fixed; */
+    z-index: 1;
 }
 
-.arjs_scene
+#arjs_scene
 {
     z-index: 4;
 }
